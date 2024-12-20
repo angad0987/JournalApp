@@ -88,6 +88,9 @@ public class UserService {
         return null;
 
     }
+    public void ha(){
+
+    }
     public void deleteUser(ObjectId id){
         Optional<User> user=userRepo.findById(id);
         user.ifPresent(entry -> userRepo.delete(entry));
