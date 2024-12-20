@@ -50,6 +50,10 @@ public class UserService {
 
     }
 
+    public void hii(){
+
+    }
+
     public User save(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(List.of("USER"));
