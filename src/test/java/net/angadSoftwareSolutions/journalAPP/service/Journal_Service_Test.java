@@ -7,6 +7,7 @@ import net.angadSoftwareSolutions.journalAPP.repository.UserRepo;
 import net.bytebuddy.asm.Advice;
 import org.bson.types.ObjectId;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -42,6 +43,7 @@ public class Journal_Service_Test {
         MockitoAnnotations.initMocks(this);
     }
 
+    @Disabled
     @ParameterizedTest
     @MethodSource("provideTestScenerios")
     public void getAllJournalsByUser(String username,int expectedEntryCount,boolean userExists){

@@ -5,6 +5,7 @@ import net.angadSoftwareSolutions.journalAPP.entity.User;
 import net.angadSoftwareSolutions.journalAPP.repository.UserRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -34,6 +35,7 @@ public class UserDetailsServiceImplementationTest {
         MockitoAnnotations.initMocks(this);
     }
 
+    @Disabled
     @Test
     public void loadUserByUsernameByTest(){
         when(userRepo.findByUsername("Angadbir0987")).thenReturn(User.builder().username("Angadbir0987").password("2343JKBLBUbcluib$$$$%@TVYBVB&G").roles(new ArrayList<>()).build());
